@@ -1,4 +1,4 @@
-import Container from './container'
+import Container from '../util/container'
 
 const Footer = () => {
   return (

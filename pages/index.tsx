@@ -1,11 +1,13 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
+import Container from '../components/util/container'
+import MoreStories from '../components/home/more-stories'
+import HeroPost from '../components/home/hero-post'
+
+import Layout from '../components/layout/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import Post from '../interfaces/post'
+import Header from "../components/layout/header";
+import Intro from "../components/home/intro";
 
 type Props = {
   allPosts: Post[]
@@ -18,8 +20,9 @@ export default function Index({ allPosts }: Props) {
     <>
       <Layout>
         <Head>
-          <title>Connor Glynn</title>
+          <title>🚀Connor Glynn</title>
         </Head>
+        <Header />
         <Container>
           <Intro />
           {heroPost && (
